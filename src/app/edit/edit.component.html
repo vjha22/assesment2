@@ -1,0 +1,42 @@
+<div class="container" style="background-color: rgba(3, 190, 128, 0.897)">
+    <form (ngSubmit)="editEmployee()" class="col-md-6">
+        <div class="form-group">
+            <h2 >Edit {{employee.name}}</h2>
+        </div>
+        <div class="form-group">
+            <label for="my-input">Name</label>
+            <input placeholder="Enter your full name" class="form-control" type="text" name="name" [(ngModel)]="employee.name">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Home Address</label>
+            <input placeholder="Enter your address" class="form-control" type="text" name="address" [(ngModel)]="employee.address">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Dob</label>
+            <input placeholder="Enter your date of birth" class="form-control" type="date" name="dob"
+                [(ngModel)]="employee.dob">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Mobile Number</label>
+            <input placeholder="Enter your mobile number" class="form-control" type="text" name="number"
+                [(ngModel)]="employee.number">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Degree</label>
+            <input placeholder="enter your highest degree" class="form-control" type="text" name="degree"   [(ngModel)]="employee.degree">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Marks</label>
+            <input placeholder="Enter your Marks " class="form-control" type="number" name="marks" [(ngModel)]="employee.marks">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Stream</label>
+            <input placeholder="Enter your Stream" class="form-control" type="stream" name="marks" [(ngModel)]="employee.stream">
+        </div>
+        <div class="form-group">
+            <label for="my-input">College</label>
+            <input placeholder="Enter your College Name" class="form-control" type="stream" name="college" [(ngModel)]="employee.college">
+        </div>
+        <button class="btn btn-primary" type="submit">Edit details</button>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<div class="container" style="background-color: aquamarine">
+  <div class="form-group">
+    <form (ngSubmit)="searchEmployee()"></form>
+    <label for="my-input">Search Employee Name</label>
+    <input placeholder="Enter full name" class="form-control" type="text" name="empname" [(ngModel)]="empname">
+    <button class="btn btn-primary" type="submit">Search</button>
+</div>
+
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Dob</th>
+          <th scope="col">Mobile Number</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngIf="employees.length > 0">
+        <tr *ngFor="let employee of employees, let i=index">
+          <th scope="row"> {{i+1}} </th>
+          <td> {{employee.name}} </td>
+          <td> {{employee.address}} </td>
+          <td> {{employee.dob}} </td>
+        
+
+
+          <a routerLink="edit/{{employee.id}}" class="btn btn-sm btn-info">Edit</a> <>
+          <a (click)="rmv(i)" class="btn btn-sm btn-danger">Delete</a> <>
+          <a routerLink="details/{{employee.id}}" class="btn btn-sm btn-warning"> Full Details</a>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  
